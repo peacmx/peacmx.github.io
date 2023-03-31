@@ -1,0 +1,65 @@
+url: https://peac.mx # https://y7kim.github.io
+baseurl: /peac/
+
+# Site settings
+title: Profesionales de la Edición AC
+email: informes@peac.mx
+description: "Brindamos a los profesionales de la edición las herramientas para hacer su labor más sólida con miras a formar una comunidad unida y adaptada a las necesidades de los medios impresos y electrónicos actuales."
+
+
+# Team names, titles and social links
+people:
+- name: Ana Lilia Arias
+  pic: 1
+  position: Presidenta PEAC
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: stack-overflow
+      url: #
+
+- name: Beatriz Alcocer
+  pic: 2
+  position: Puesto
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: linkedin
+      url: #
+
+- name: Persona 3
+  pic: 3
+  position: Puesto
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/peacmx
+  - title: facebook
+    url: https://www.facebook.com/profesionales.delaedicion
+  - title: youtube
+    url: https://www.youtube.com/@ProfediMX/videos
+  - title: linkedin
+    url: https://www.linkedin.com/company/profesionales-de-la-edici%C3%B3n-ac/
+  - title: whatsapp
+    url: https://api.whatsapp.com/send/?phone=5525105455&text=Hola%21+%C2%BFPueden+ayudarme%3F&type=phone_number&app_absent=0
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: Tlapancalco 43, Barrio de Santa Catarina,
+  - line: Alcaldía Coyoacán, Ciudad de México
+
+# Build settings
+markdown: kramdown
+permalink: pretty
