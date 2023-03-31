@@ -279,7 +279,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.url }}/img/peac_front.png');
+    background-image: url('/img/peac_front.png');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
