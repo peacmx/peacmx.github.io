@@ -1,0 +1,15 @@
+---
+title: De oficio correctora
+subtitle: con Grace Sutachan
+layout: default
+modal-id: 5
+date: 2022-09-23
+img: oficio.jpeg
+thumbnail: oficio-thumbnail.png
+alt: image-alt
+project-date: 23 de septiembre, 2022
+client: Profesionales de la Edición A. C.
+category: Charla
+description: En De oficio traductora, Grace Sutachan, presidenta de la Organización Mexicana de Traductores (OMT) conversa con Ana Lilia Arias sobre el panorama de la traducción e interpretación en México, el reconocido Congreso de San Jerónimo y la modificación al artículo 153 del Reglamento de Insumos a la Salud, entre otros aspectos. <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/cVdLFvoGAtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>.
+
+---

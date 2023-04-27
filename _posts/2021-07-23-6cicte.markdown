@@ -1,0 +1,15 @@
+---
+title: Sobre el &#35;6CICTE 
+subtitle: con Jaime Pinilla
+layout: default
+modal-id: 3
+date: 2021-07-29
+img: 6cicte.png
+thumbnail: 6cicte-thumbnail.png
+alt: image-alt
+project-date: 29 de julio 2021
+client: Profesionales de la Edición A. C.
+category: Charla
+description: <iframe width="560" height="315" src="https://www.youtube.com/embed/8Q0cwBfpiN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
