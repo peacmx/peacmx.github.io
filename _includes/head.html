@@ -63,10 +63,12 @@ header.blog-header .post-keywords {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 </style>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+ {% if page.collection == 'posts' %}
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}">
+<meta property="og:url" content="https://peacmx.github.io{{ page.url }}">
+{% if page.image %}<meta property="og:image" content="https://peacmx.github.io{{ page.image }}">{% endif %}
+<meta name="twitter:card" content="summary_large_image">
+{% endif %}
 </head>
