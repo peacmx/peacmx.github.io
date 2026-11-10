@@ -2,17 +2,77 @@
 layout: blog
 title: Blog
 ---
-<div class="container py-5">
-  <h1>Blog</h1>
-  {% assign visibles = site.posts | where_exp: "p", "p.oculto != true" %}
-{% for post in visibles %}
-  <article class="mb-4">
-    <h2 class="h4"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <p class="text-muted">
-      {{ post.author }} · {{ post.date | date: "%d/%m/%Y" }}
-      {% if post.categories.size > 0 %}· {{ post.categories | join: ", " }}{% endif %}
-    </p>
-    <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
-  </article>
-  {% endfor %}
+<div class="container" style="padding-top: 50px; padding-bottom: 70px;">
+  <div class="row blog-grid">
+    {% assign visibles = site.posts | where_exp: "p", "p.modal-id == nil" %}
+    {% for post in visibles %}
+    {% assign a = site.data.authors[post.author] %}
+    {% assign palabras = post.content | strip_html | number_of_words %}
+    {% assign minutos = palabras | divided_by: 200.0 | ceil %}
+    {% assign imagen = post.image | default: '/img/blog-header.jpg' %}
+    <div class="col-md-4 col-sm-6 blog-col">
+      <article class="blog-card">
+        <a href="{{ post.url | relative_url }}" class="blog-card-img" style="background-image: url('{{ imagen }}');" aria-label="{{ post.title | escape }}"></a>
+        <div class="blog-card-body">
+          {% if post.categories.size > 0 %}
+          <p class="blog-card-cats">
+            {% for c in post.categories %}<span class="label label-default">{{ c }}</span> {% endfor %}
+          </p>
+          {% endif %}
+          <h3 class="blog-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="blog-card-meta text-muted">
+            {{ a.name | default: post.author }} · {{ post.date | date: "%d/%m/%Y" }} · {{ minutos }} min
+          </p>
+          <p class="blog-card-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}</p>
+          <a href="{{ post.url | relative_url }}" class="blog-card-more">Leer más <i class="fa fa-angle-right"></i></a>
+        </div>
+      </article>
+    </div>
+    {% endfor %}
+  </div>
 </div>
+
+<style>
+  .blog-grid { display: flex; flex-wrap: wrap; }
+  .blog-grid:before, .blog-grid:after { display: none; }
+  .blog-col { display: flex; margin-bottom: 30px; }
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  }
+  .blog-card-img {
+    display: block;
+    height: 180px;
+    background-color: #999;
+    background-size: cover;
+    background-position: center;
+  }
+  .blog-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+  }
+  .blog-card-cats { margin: 0 0 10px; }
+  .blog-card-title {
+    margin: 0 0 8px;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: none;
+  }
+  .blog-card-title a { color: #222; }
+  .blog-card-title a:hover { color: #fed136; text-decoration: none; }
+  .blog-card-meta { font-size: 13px; margin: 0 0 12px; }
+  .blog-card-excerpt { flex: 1; font-size: 15px; }
+  .blog-card-more { font-weight: 700; }
+</style>
