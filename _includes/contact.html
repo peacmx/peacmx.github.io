@@ -1,43 +1,109 @@
 <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contáctanos</h2>
-                    <h3 class="section-subheading text-muted">Afíliate a PEAC o envíanos tus comentarios.</h3>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Contáctanos</h2>
+                <h3 class="section-subheading text-muted">Afíliate a PEAC o envíanos tus comentarios.</h3>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form action="https://getform.io/f/e50d0433-c334-4011-8bcd-8f688c7a6b09" method="POST">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="control-group form-group">
-                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre *" id="name" required data-validation-required-message="Ingresa tu nombre.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group form-group">
-                                    <input type="email" class="form-control" name="mail" placeholder="Correo *" id="email" required data-validation-required-message="Proporcione dirección electrónica.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group form-group">
-                                    <input type="tel" class="form-control" name="telefono" placeholder="Teléfono *" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="control-group form-group">
-                                    <textarea name="message" class="form-control" placeholder="Mensaje *" id="message" required data-validation-required-message="Por favor escribe tu mensaje."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="Éxito"></div>
-                                <button type="submit" value="Enviar mensaje" class="btn btn-xl">Enviar mensaje</button>
-                            </div>
-                        </div>
-                    </form>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="contacto-tarjeta text-center">
+                    <div class="contacto-icono"><i class="fa fa-envelope"></i></div>
+                    <h4>Escríbenos un correo</h4>
+                    <p class="text-muted">Elige el motivo y se abrirá tu programa de correo con el mensaje listo para completar.</p>
+
+                    <p class="contacto-botones">
+                        <a class="btn btn-xl"
+                           href="mailto:informes@peac.mx?subject=Quiero%20afiliarme%20a%20PEAC&body=Hola%2C%0A%0AMe%20interesa%20afiliarme%20a%20PEAC.%0A%0ANombre%3A%20%0ATel%C3%A9fono%3A%20%0AProfesi%C3%B3n%20u%20oficio%3A%20%0A%0AGracias.">
+                            <i class="fa fa-user-plus"></i> Quiero afiliarme
+                        </a>
+                        <a class="btn btn-xl btn-contacto-claro"
+                           href="mailto:informes@peac.mx?subject=Comentarios%20para%20PEAC&body=Hola%2C%0A%0AMi%20nombre%20es%3A%20%0A%0AMi%20mensaje%3A%20%0A%0AGracias.">
+                            <i class="fa fa-comment"></i> Enviar comentarios
+                        </a>
+                    </p>
+
+                    <p class="contacto-correo">
+                        Escríbenos a
+                        <strong id="contacto-direccion">informes@peac.mx</strong>
+                        <button type="button" class="btn btn-default btn-sm" id="contacto-copiar">
+                            <i class="fa fa-clipboard"></i> <span>Copiar</span>
+                        </button>
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <style>
+        #contact .contacto-tarjeta {
+            background: #fff;
+            color: #333;
+            border-radius: 6px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+        #contact .contacto-tarjeta h4 {
+            margin-top: 10px;
+            font-weight: 700;
+            text-transform: none;
+        }
+        #contact .contacto-icono {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            margin: -80px auto 10px;
+            border-radius: 50%;
+            background: #fed136;
+            color: #fff;
+            font-size: 34px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+        #contact .contacto-botones {
+            margin: 25px 0;
+        }
+        #contact .contacto-botones .btn {
+            margin: 5px;
+        }
+        #contact .btn-contacto-claro {
+            background: transparent;
+            color: #333;
+            border: 2px solid #fed136;
+        }
+        #contact .btn-contacto-claro:hover {
+            background: #fed136;
+            color: #fff;
+        }
+        #contact .contacto-correo {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        #contact .contacto-correo strong {
+            margin: 0 6px;
+            color: #333;
+        }
+    </style>
+
+    <script>
+        (function () {
+            var boton = document.getElementById('contacto-copiar');
+            if (!boton) return;
+            boton.addEventListener('click', function () {
+                var direccion = document.getElementById('contacto-direccion').textContent;
+                var etiqueta = boton.querySelector('span');
+                function listo() {
+                    etiqueta.textContent = '¡Copiado!';
+                    setTimeout(function () { etiqueta.textContent = 'Copiar'; }, 2000);
+                }
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(direccion).then(listo);
+                } else {
+                    window.prompt('Copia la dirección:', direccion);
+                }
+            });
+        })();
+    </script>
+</section>
