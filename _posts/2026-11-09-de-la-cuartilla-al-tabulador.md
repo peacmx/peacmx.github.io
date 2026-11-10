@@ -3,7 +3,7 @@ title: "De la cuartilla unificada al tabulador propio: autonomía tarifaria y di
 author: "Ana Lilia Arias"
 categories: [investigación, divulgación]
 keywords: [corrección de estilo, blog, tabuladores]
-image: /img/blog/cuartilla.jpg
+image: /img/blog/cuartilla2.jpg
 
 ---
 
