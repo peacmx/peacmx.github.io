@@ -1,0 +1,36 @@
+---
+layout: blog
+---
+{% assign autor = site.data.authors[page.author] %}
+{% assign autor_nombre = autor.name | default: page.author %}
+{% assign autor_cita = autor.citation | default: autor_nombre %}
+{% assign words = content | number_of_words %}
+{% assign minutos = words | divided_by: 200.0 | ceil %}
+{% assign anio = page.date | date: "%Y" %}
+{% assign url_completa = site.url | append: site.baseurl | append: page.url %}
+{% assign ab = "{" %}
+{% assign cb = "}" %}
+
+<article class="container" style="max-width: 800px; padding-top: 120px; padding-bottom: 60px;">
+
+  {{ content }}
+
+  <hr>
+  <section id="citar">
+    <h4>Cómo citar esta entrada</h4>
+
+    <p><strong>APA</strong><br>
+    {{ autor_cita }} ({{ anio }}). <em>{{ page.title }}</em>. {{ site.title }}. {{ url_completa }}</p>
+
+    <p><strong>MLA</strong><br>
+    {{ autor_nombre }}. "{{ page.title }}." <em>{{ site.title }}</em>, {{ page.date | date: "%d/%m/%Y" }}, {{ url_completa }}.</p>
+
+    <p><strong>BibTeX</strong></p>
+<pre>@online{ {{ page.slug | slugify }}{{ anio }},
+  author = {{ ab }}{{ autor_nombre }}{{ cb }},
+  title  = {{ ab }}{{ page.title }}{{ cb }},
+  year   = {{ ab }}{{ anio }}{{ cb }},
+  url    = {{ ab }}{{ url_completa }}{{ cb }}
+}</pre>
+  </section>
+</article>

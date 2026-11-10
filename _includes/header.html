@@ -1,3 +1,10 @@
+{% if page.url == '/' %}
+  {% assign inicio = '' %}
+  {% assign scroll = 'page-scroll' %}
+{% else %}
+  {% assign inicio = '/' %}
+  {% assign scroll = '' %}
+{% endif %}
 <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -9,30 +16,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><!--{{site.title}}--><img src="img/logos/logoPEAC_1.png" class="navlogo" alt="PEAC_LOGO"></a>
+                <a class="navbar-brand {{ scroll }}" href="{{ inicio }}#page-top"><img src="/img/logos/logoPEAC_1.png" class="navlogo" alt="PEAC_LOGO"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Principios</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Actividades</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">Acerca de</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="/afil/afil.zip">Afiliación</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contacto</a>
-                    </li>
+                    <li><a class="{{ scroll }}" href="{{ inicio }}#services">Principios</a></li>
+                    <li><a class="{{ scroll }}" href="{{ inicio }}#portfolio">Actividades</a></li>
+                    <li><a class="{{ scroll }}" href="{{ inicio }}#about">Acerca de</a></li>
+                    <li><a href="/afil/afil.zip">Afiliación</a></li>
+                    <li><a class="{{ scroll }}" href="{{ inicio }}#contact">Contacto</a></li>
+                    <li><a href="/blog/">Blog</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -41,6 +36,7 @@
     </nav>
 
     <!-- Header -->
+{% if page.url == '/' %}
     <header>
         <div class="container">
             <div class="intro-text">
@@ -50,8 +46,36 @@
             </div>
         </div>
     </header>
-<!--
-        {% for page in site.pages %}
-          {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
-        {% endfor %}
- -->
+{% else %}
+    {% assign imagen_cabecera = page.image | default: '/img/blog-header.jpg' %}
+    <header class="blog-header" style="background-image: url('{{ imagen_cabecera }}');">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading">{{ page.title }}</div>
+
+                {% if page.collection == 'posts' %}
+                {% assign autor = site.data.authors[page.author] %}
+                {% assign autor_nombre = autor.name | default: page.author %}
+                {% assign palabras = page.content | strip_html | number_of_words %}
+                {% assign minutos = palabras | divided_by: 200.0 | ceil %}
+
+                <p class="post-meta">
+                    Por <strong>{{ autor_nombre }}</strong> ·
+                    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time> ·
+                    {{ minutos }} min de lectura
+                </p>
+
+                {% if page.categories.size > 0 %}
+                <p class="post-tags">
+                    {% for c in page.categories %}<span class="label label-default">{{ c }}</span> {% endfor %}
+                </p>
+                {% endif %}
+
+                {% if page.keywords %}
+                <p class="post-keywords">Keywords: {{ page.keywords | join: ", " }}</p>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </header>
+{% endif %}

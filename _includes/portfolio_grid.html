@@ -8,7 +8,8 @@
                 </div>
             </div>
             <div class="row">
-            {% for post in site.posts %}
+           {% assign actividades = site.posts | where_exp: "p", "p.modal-id != nil" %}
+{% for post in actividades %}
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
