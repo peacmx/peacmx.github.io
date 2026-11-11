@@ -2,8 +2,8 @@
 title: "De la cuartilla unificada al tabulador propio: autonomía tarifaria y dignificación laboral"
 author: "Ana Lilia Arias"
 categories: [investigación, divulgación]
-keywords: [corrección de estilo, blog, tabuladores]
-image: /img/blog/cuartilla2.jpg
+keywords: [autonomía tarifaria, dignificación laboral, criterios de valuación, trabajo asociativo, corrección de estilo]
+image: /img/blog/cuartilla.jpg
 
 ---
 
@@ -25,7 +25,7 @@ Hace dos años, en el CICTE anterior, planteé un primer paso indispensable: pro
 
 Antes ya había presentado formalmente el ajuste de cuartillas al Fondo de Cultura Económica; esto porque junto con la UNAM son instituciones clave para el trabajo editorial. En su momento, la propuesta generó resistencia o fue minimizada; sin embargo, este año el Fondo dio un paso histórico al ajustar su pauta a 1620 caracteres, gracias al impulso y trabajo constante de dos colegas en la trinchera. Cuando la propuesta es sólida y justa, sin lugar a duda permea.
 
-Si es posible modificar métricas institucionales, el siguiente paso lógico y urgente no es seguir esperando que la industria nos fije un tabulador, sino transitar hacia la autonomía tarifaria y al arancel vivo. De nada sirve unificar el envase si las lógicas de contratación le siguen imponiendo precios ciegos al contenido porque no ven sino números planos e ignoran el esfuerzo real del profesional.
+Si es posible modificar métricas institucionales, el siguiente paso lógico y urgente no es seguir esperando que la industria nos fije un tabulador, sino transitar hacia la autonomía tarifaria y al arancel vivo. De nada sirve unificar el envase si las lógicas de contratación le siguen imponiendo precios ciegos al contenido porque no ven sino números planos e ignoran el esfuerzo, experiencia y conocimiento del profesional.
 
 ## La resistencia del texto
 
