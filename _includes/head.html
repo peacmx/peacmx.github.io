@@ -18,6 +18,7 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <style>
+/* ---------- Cabecera de las entradas ---------- */
 header.blog-header {
     padding-top: 140px;
     padding-bottom: 60px;
@@ -53,14 +54,70 @@ header.blog-header .post-tags .label {
     padding: 5px 10px;
     margin: 0 3px;
 }
+header.blog-header .post-tags a.label:hover {
+    background-color: #fed136;
+}
 header.blog-header .post-keywords {
     font-size: 14px;
     font-style: italic;
     margin: 0;
 }
+header.blog-header .post-keywords a {
+    color: inherit;
+    text-decoration: underline;
+}
+header.blog-header .post-keywords a:hover {
+    color: #fed136;
+}
 header.blog-header .post-meta,
 header.blog-header .post-keywords {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Texto de las entradas ---------- */
+.entrada p,
+.entrada li {
+    font-size: 18px;
+    line-height: 1.7;
+}
+.entrada p,
+.entrada li,
+.entrada blockquote {
+    -webkit-hyphens: none;
+    hyphens: none;
+    word-break: normal;
+}
+.entrada blockquote {
+    margin: 25px 0;
+    padding: 5px 20px;
+    border-left: 4px solid #ddd;
+}
+.entrada blockquote p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: #555;
+}
+.entrada #citar p,
+.entrada #citar li,
+.entrada #compartir p {
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+@media (min-width: 768px) {
+    .entrada p,
+    .entrada li {
+        font-size: 19px;
+    }
+    .entrada blockquote p {
+        font-size: 18px;
+    }
+    .entrada #citar p,
+    .entrada #citar li,
+    .entrada #compartir p {
+        font-size: 15px;
+    }
 }
 </style>
  {% if page.collection == 'posts' %}

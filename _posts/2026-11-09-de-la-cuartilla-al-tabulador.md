@@ -7,6 +7,13 @@ image: /img/blog/cuartilla.jpg
 
 ---
 
+<blockquote>
+El viernes 6 me correspondió presentar mi ponencia en el 8CICTE: «De la cuartilla unificada al tabulador propio: autonomía tarifaria y dignificación laboral». Sin embargo, por factores logísticos y una gestión de mesa donde el cronómetro privó sobre el contenido la exposición quedó interrumpida exactamente a la mitad.
+Paradójicamente, lo ocurrido en el estrado es un síntoma vivo de lo que aborda mi trabajo: cuando las pautas de presentación no se comunican desde la aceptación formal, sino de última hora y cuando se exige resumir décadas de análisis gremial en un minuto de improvisación, se reproduce la misma prisa y precarización que intentamos erradicar en el ejercicio profesional.
+Por congruencia con esta postura y el respeto que me merece nuestro trabajo, comparto aquí el texto íntegro de mi ponencia; prefiero dejar hablar al texto.
+Aquí la ponencia que pudo haber sido, pero no fue 👉
+</blockquote>
+
 Hace 15 años, cuando nos reuníamos por primera vez en torno al primer CICTE en Buenos Aires, partíamos de una premisa clara: que, durante siglos, los correctores habíamos efectuado nuestra labor de manera callada, anónima e invisible. Aquel congreso fue la oportunidad para que, por primera vez, se escuchara nuestra voz.
 
 Y la voz se escuchó. Dejamos de ser invisibles; nos hemos reunido en sucesivas ocasiones y hoy nos convoca, por segunda ocasión, un querido país hermano. Sin embargo, lo cierto es que no hemos logrado tener mejoras reales en la profesión. Y no porque no se haya avanzado, sino porque en el camino del péndulo que echamos a andar desde un poco antes de 2011 se desplazó hacia el extremo y hoy hace falta que frene en un justo medio.
